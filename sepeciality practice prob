@@ -1,0 +1,10 @@
+# cook your dish he
+t=int(input())
+for i in range(t):
+    x,y,z=map(int,input().split())
+    if (x>y and x>z):
+        print("setter")
+    elif(y>z and y>x):
+        print("tester")
+    else:
+        print("editorialist")
