@@ -1,0 +1,21 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Read the number of test cases
+
+        while (t-- > 0) {
+            int x = sc.nextInt(); // Read the amount X for each test case
+
+            if (x % 5 != 0) {
+                System.out.println(-1); // If X is not divisible by 5, it's impossible
+            } else {
+                System.out.println((x + 5) / 10); // Optimized way to calculate the minimum coins
+            }
+        }
+        sc.close(); // Close the scanner to prevent resource leaks
+    }
+}
