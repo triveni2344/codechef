@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Read the number of test cases
+
+        while(t-- > 0) {
+            int s = sc.nextInt(); // Total storage
+            int x = sc.nextInt(); // Space occupied by app 1
+            int y = sc.nextInt(); // Space occupied by app 2
+            int z = sc.nextInt(); // Space required by new app
+
+            int availableSpace = s - (x + y); // Calculate available space
+
+            if (availableSpace >= z) {
+                System.out.println(0); // No apps need to be deleted
+            } else {
+                int requiredSpace = z - availableSpace;
+                if (requiredSpace <= x || requiredSpace <= y) {
+                    System.out.println(1); // Delete one app
+                } else {
+                    System.out.println(2); // Delete both apps
+                }
+            }
+        }
+    }
+}
