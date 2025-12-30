@@ -1,0 +1,21 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		int scoreAB =Math.max(0,500-(x*2))+Math.max(0,1000-((x+y)*4));
+		int scoreBA =Math.max(0,1000-(y*4))+Math.max(0,500-((x+y)*2));
+		System.out.println(Math.max(scoreAB,scoreBA));
+		}
+
+	}
+}
