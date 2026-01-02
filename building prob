@@ -1,0 +1,31 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int A=sc.nextInt();
+		    int B=sc.nextInt();
+		    int x=sc.nextInt();
+		    int y=sc.nextInt();
+		    
+		    double timeA=(double) A/x;
+		    double timeB=(double) B/y;
+		    
+		    if(timeA<timeB){
+		        System.out.println("chef");
+		    }else if(timeB < timeA){
+		        System.out.println("chefina");
+		    }else{
+		        System.out.println("Both");
+		    }
+		}
+
+	}
+}
