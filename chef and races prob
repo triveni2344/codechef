@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Read the number of test cases
+
+        while (t-- > 0) {
+            int x = sc.nextInt(); // Race 1 for Chef
+            int y = sc.nextInt(); // Race 2 for Chef
+            int a = sc.nextInt(); // Race 1 for Rival
+            int b = sc.nextInt(); // Race 2 for Rival
+
+            int goldMedals = 0;
+
+            if (x != a && x != b) {
+                goldMedals++; // Chef wins race x
+            }
+            if (y != a && y != b) {
+                goldMedals++; // Chef wins race y
+            }
+
+            System.out.println(goldMedals);
+        }
+    }
+}
