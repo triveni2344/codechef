@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        int numRounds = sc.nextInt();
+
+        int player1Score = 0;
+        int player2Score = 0;
+        int maxLead = 0;
+        int winner = 0;
+
+        for (int i = 0; i < numRounds; i++) {
+            int score1 = sc.nextInt();
+            int score2 = sc.nextInt();
+
+            player1Score += score1;
+            player2Score += score2;
+
+            int lead = player1Score - player2Score;
+            int absLead = Math.abs(lead);
+
+            if (absLead > maxLead) {
+                maxLead = absLead;
+                winner = (lead > 0) ? 1 : 2;
+            }
+        }
+
+        System.out.println(winner + " " + maxLead);
+    }
+}
