@@ -1,0 +1,40 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the number of test cases
+        int t = sc.nextInt();
+
+        // Iterate through each test case
+        while (t-- > 0) {
+            // Read the number of contest codes
+            int n = sc.nextInt();
+            sc.nextLine(); // Consume the newline character
+
+            // Read the line of contest codes and split it into an array
+            String[] codes = sc.nextLine().split(" ");
+
+            // Initialize counters for each contest code
+            int start38 = 0;
+            int ltime108 = 0;
+
+            // Iterate through the codes and count each type
+            for (String code : codes) {
+                if (code.equals("START38")) {
+                    start38++;
+                } else if (code.equals("LTIME108")) {
+                    ltime108++;
+                }
+            }
+
+            // Print the counts for each contest
+            System.out.println(start38 + " " + ltime108);
+        }
+
+        sc.close(); // Close the scanner
+    }
+}
