@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Read the number of test cases
+
+        while (t-- > 0) { // Iterate through each test case
+            int p = sc.nextInt(); // Profit of company A
+            int q = sc.nextInt(); // Profit of company B
+            int r = sc.nextInt(); // Profit of company C
+            int s = sc.nextInt(); // Profit of company D
+
+            // Calculate the sum of all profits
+            int sum = p + q + r + s;
+
+            // Check for monopoly condition
+            if (p > sum - p || q > sum - q || r > sum - r || s > sum - s) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+}
