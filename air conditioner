@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Read the number of test cases
+
+        while (t-- > 0) {
+            int a = sc.nextInt(); // Read A
+            int b = sc.nextInt(); // Read B
+            int c = sc.nextInt(); // Read C
+
+            if (Math.max(a, c) <= b) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+        }
+    }
+}
